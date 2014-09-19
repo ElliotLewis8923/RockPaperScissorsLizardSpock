@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Rock Paper Scissors Lizard Spock</title>
+		<meta charset='UTF8'>
+		<link rel="stylesheet" href="/css/application.css">
+	</head>
+<body>
+<form id='name'>
+	<input type='text' placeholder='Please enter your name'>
+	<button type='submit'>Play!</button>
+</form>
+
+	<h3>Rock Paper Scissors Lizard Spock</h3>
+	<p>Choose your weapon!</p>
+	<section class='choices'>
+		<img src='http://www-static.weddingbee.com/pics/190566/huge-rock.jpg' data-pick='rock'>
+		<img src='http://www.asia.ru/images/target/photo/51709823/PE_Film_Paper.jpg' data-pick='paper'>
+		<img src="http://images.fineartamerica.com/images-medium-large/scissors-tony-cordoza.jpg" data-pick='scissors'>
+		<img src="http://i2.wp.com/listverse.com/wp-content/uploads/2010/12/a304_giant_leaf_tailed_gecko.jpg?resize=550%2C438" data-pick='lizard'>
+		<img src="http://i1.cdnds.net/13/15/618x527/star-trek-spock-5.jpg" data-pick='spock'>
+	</section>
+	
+	<ul id='results'>
+		
+	</ul>
+<script src="lib/RockPaperScissors.js"></script>
+<script src="lib/jquery-2.1.1.min.js"></script>
+
+<script>
+
+
+$(document).ready(function(){ 
+var player1 = new Player('Elliot');
+var player2 = new Player('Computer');
+
+	var game = new Game(player1, player2);
+
+	// $('#name').on('submit', function() { 
+	// 	var name = $('#name').val();
+	// 	player1.name = name;
+	// });
+
+	
+
+	$('.choices img').on('click', function(){
+		var weapon = ['rock','paper','scissors','lizard','spock']
+		player1.picks($(this).data('pick'));
+		player2.picks(weapon[Math.floor(Math.random() * 5)]);
+
+	$('<li>' + game.winningMessage() + '</li>').prependTo('#results').slideDown();
+
+
+		$('#results li:gt(3)').fadeOut(function(){
+		$(this).remove();
+		console.log('A')
+	});
+	})
+})
+
+</script>
+</body>
+</html>
+

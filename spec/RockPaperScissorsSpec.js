@@ -26,14 +26,21 @@ describe("Rock-Paper-Scissors", function() {
         player1.picks('rock');
         player2.picks('paper');
         expect(game.winner()).toBe(player2);
+        console.log(game.winner())
 
       });
 
-      it('should crush lizard', function() {
+      it('should smash lizard', function() {
         player1.picks('rock');
         player2.picks('lizard');
         expect(game.winner()).toBe(player1); 
 
+      });
+
+      it('should be vapourised by spock', function() {
+        player1.picks('rock');
+        player2.picks('spock');
+        expect(game.winner()).toBe(player2);
       });
 
     });
@@ -82,20 +89,39 @@ describe("Rock-Paper-Scissors", function() {
 
   describe('draws', function() {
 
-    describe('any identical picks', function() {
+    it('identical picks', function() {
 
-      it('should result in no winner', function() {
-
-        var drawGameResults = ['rock', 'paper', 'scissors'].map(function(x) {
-          player1.picks(x);
-          player2.picks(x);
-          return game.winner();
-        });
-
-        expect(drawGameResults).toEqual([null, null, null]);
+        player1.picks('rock');
+        player2.picks('rock');
+        expect(game.winner()).toBe(null);
+        expect(game.winningMessage()).toEqual('Draw!')
 
       });
 
+  });
+
+  //   describe('any identical picks', function() {
+
+  //     it('should result in no winner', function() {
+  //       var drawGameResults = ['rock', 'paper', 'scissors'].map(function(x) {
+  //         player1.picks(x);
+  //         player2.picks(x);
+  //         return game.winner();
+  //       });
+
+  //       expect(drawGameResults).toEqual([null, null, null]);
+  //     });
+
+  //   });
+
+  // });
+
+  describe('victory messages', function() {
+
+    it("should return the winner's name, the verb and the loser's name", function() {
+      player1.picks('scissors');
+      player2.picks('rock');
+      expect(game.winningMessage()).toEqual('Bob crushes Alex');
     });
 
   });
