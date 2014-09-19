@@ -80,6 +80,7 @@ describe("Rock-Paper-Scissors", function() {
         player1.picks('scissors');
         player2.picks('rock');
         expect(game.winner()).toBe(player2);
+        console.log(game.winningMessage());
 
       });
 
@@ -122,6 +123,7 @@ describe("Rock-Paper-Scissors", function() {
       player1.picks('scissors');
       player2.picks('rock');
       expect(game.winningMessage()).toEqual('Bob crushes Alex');
+      console.log(game.winningMessage());
     });
 
   });
