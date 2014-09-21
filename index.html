@@ -7,18 +7,18 @@
 	</head>
 <body>
 <form id='name'>
-	<input type='text' placeholder='Please enter your name'>
+	<input type='text' id='username' placeholder='Please enter your name'>
 	<button type='submit'>Play!</button>
 </form>
 
 	<h3>Rock Paper Scissors Lizard Spock</h3>
 	<p>Choose your weapon!</p>
 	<section class='choices'>
-		<img src='http://www-static.weddingbee.com/pics/190566/huge-rock.jpg' data-pick='rock'>
-		<img src='http://www.asia.ru/images/target/photo/51709823/PE_Film_Paper.jpg' data-pick='paper'>
-		<img src="http://images.fineartamerica.com/images-medium-large/scissors-tony-cordoza.jpg" data-pick='scissors'>
-		<img src="http://i2.wp.com/listverse.com/wp-content/uploads/2010/12/a304_giant_leaf_tailed_gecko.jpg?resize=550%2C438" data-pick='lizard'>
-		<img src="http://i1.cdnds.net/13/15/618x527/star-trek-spock-5.jpg" data-pick='spock'>
+		<img src='http://th05.deviantart.net/fs70/PRE/i/2013/012/c/6/rock_01_png___by_alzstock-d5r84up.png' data-pick='rock'>
+		<img src='http://www.on-linepaper.co.uk/images/Generic-Paper-Roll.png' data-pick='paper'>
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_7VKmNZLD4950ohmNXQcbxNm3TPxLXJS2pjC2gHrWwRwAdvr0" data-pick='scissors'>
+		<img src="http://www.clipartbest.com/cliparts/jix/j6G/jixj6G4iE.png" data-pick='lizard'>
+		<img src="http://i867.photobucket.com/albums/ab240/dixiegrl1947/people/Spock-psd43426.png" data-pick='spock'>
 	</section>
 	
 	<ul id='results'>
@@ -30,16 +30,21 @@
 <script>
 
 
+
 $(document).ready(function(){ 
-var player1 = new Player('Elliot');
-var player2 = new Player('Computer');
-
+	var player1 = new Player('Player1');
+	var player2 = new Player('Computer');
 	var game = new Game(player1, player2);
-
-	// $('#name').on('submit', function() { 
-	// 	var name = $('#name').val();
-	// 	player1.name = name;
-	// });
+	
+	$('#name').on('submit', function(event) { 
+ 		event.preventDefault();
+		
+	
+	 	player1.name = $('#username').val();
+	 	
+	 	console.log($('#username').val());
+	 });
+		
 
 	
 

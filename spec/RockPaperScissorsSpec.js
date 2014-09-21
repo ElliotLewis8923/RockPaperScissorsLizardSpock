@@ -33,7 +33,8 @@ describe("Rock-Paper-Scissors", function() {
       it('should smash lizard', function() {
         player1.picks('rock');
         player2.picks('lizard');
-        expect(game.winner()).toBe(player1); 
+        expect(game.winner()).toBe(player1);
+        expect(game.loser()).toBe(player2); 
 
       });
 
@@ -96,6 +97,7 @@ describe("Rock-Paper-Scissors", function() {
         player2.picks('rock');
         expect(game.winner()).toBe(null);
         expect(game.winningMessage()).toEqual('Draw!')
+        console.log(game.winningMessage())
 
       });
 
@@ -123,6 +125,13 @@ describe("Rock-Paper-Scissors", function() {
       player1.picks('scissors');
       player2.picks('rock');
       expect(game.winningMessage()).toEqual('Bob crushes Alex');
+      console.log(game.winningMessage());
+    });
+
+    it("should return the winner's name, the verb and the loser's name 2", function() {
+      player1.picks('rock');
+      player2.picks('scissors');
+      expect(game.winningMessage()).toEqual('Alex crushes Bob');
       console.log(game.winningMessage());
     });
 
