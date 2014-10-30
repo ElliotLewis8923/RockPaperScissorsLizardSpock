@@ -1,0 +1,25 @@
+{
+  "name": "RockPaperScissorsLizardSpock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElliotLewis8923/rps-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElliotLewis8923/rps-js/issues"
+  },
+  "homepage": "https://github.com/ElliotLewis8923/rps-js"
+}

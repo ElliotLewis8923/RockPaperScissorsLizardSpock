@@ -1,0 +1,91 @@
+*:focus {
+	outline: none;
+}
+
+body {
+	/*background-color: rgba(128, 0, 128, 0.83); */
+	font-family: helvetica, sans-serif;
+	margin: 0;
+	padding: 0px;
+	height: 100%;
+	background: linear-gradient(rgb(90, 0, 90), purple);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.form {
+	}
+
+form > * {
+	margin: auto;
+	display: flex;
+	padding: 0px;
+}
+
+form {
+	width: 500px;
+	padding: 0px;
+	margin: 40px auto;
+}
+
+::-webkit-input-placeholder {
+	color: black;
+	font-weight: bold;
+}
+
+form input {
+	background-color: purple;
+	color: black;
+	width: 400px;
+	height: 25px;
+	border: none;
+	border-top: 2px solid blue;
+	font-size: 20px;
+	border-radius: 1px;
+	text-align: center;
+	
+}
+
+form button {
+	position: relative;
+	top: 20px;
+	background: purple;
+	outline: none;
+	border: none;
+	width: 100px;
+	text-align: center;
+}
+
+header {
+	background-color: purple;
+	color: black;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	height: 40px;
+	border-bottom: 4px solid blue;
+}
+
+h3 {
+	font-family: helvetica, sans-serif;
+	font-size: 30px;
+	display: inline;
+
+}
+
+.choices {
+	height:100px;
+}
+
+img {
+	height:100px;
+	margin: 50px;
+	opacity: 0.4;
+	-webkit-filter: blur(1px);
+}
+
+img:hover {
+	opacity: 1;
+	-webkit-filter: blur(0px);
+
+}

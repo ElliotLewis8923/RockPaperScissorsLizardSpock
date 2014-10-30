@@ -12,7 +12,7 @@ Game.prototype.PAIRS = Game.prototype.PAIRS = {
 }
 
 Game.prototype.draw = function() {
-	return this.player1.pick === this.player2.pick
+	return this.player1.pick === this.player2.pick;
 }
 
 Game.prototype.winner = function() {
