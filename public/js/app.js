@@ -11,6 +11,15 @@ $(document).ready(function(){
 	 	
 	 	console.log($('#username').val());
 	 });
+
+	$('button').on('click', function() {
+		$('.choices').animate({
+			opacity: 1
+			}, 1000);
+		$('form').animate({
+			opacity: 0
+			}, 1000);
+		});
 		
 	$('.choices img').on('click', function(){
 		var weapon = ['rock','paper','scissors','lizard','spock']

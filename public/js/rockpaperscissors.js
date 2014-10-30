@@ -11,26 +11,23 @@ Game.prototype.PAIRS = Game.prototype.PAIRS = {
 	spock: {scissors: 'bends', rock: 'vapourises'}
 }
 
+var winner;
+var loser;
+
 Game.prototype.draw = function() {
 	return this.player1.pick === this.player2.pick;
 }
 
-Game.prototype.winner = function() {
+Game.prototype.outcome = function() {
 	if (this.draw()) { return null; }
-	return (this.PAIRS[this.player1.pick][this.player2.pick] !== undefined ? 
-		this.player1 : this.player2);
+	return (this.PAIRS[this.player1.pick][this.player2.pick] !== undefined) ? 
+		(winner = this.player1, loser = this.player2) : (winner = this.player2, loser = this.player1);
 }
-
-Game.prototype.loser = function() {
-	if (this.draw()) { return null; }
-	return (this.PAIRS[this.player2.pick][this.player1.pick] !== undefined ? 
-		this.player1 : this.player2);
-}
-		
 
 Game.prototype.winningMessage = function() {
  	if (this.draw()) { return 'Draw!'; }
- 	return [this.winner().name, this.PAIRS[this.winner().pick][this.loser().pick], this.loser().name].join(' ');
+ 	this.outcome();
+ 	return [winner.name, this.PAIRS[winner.pick][loser.pick], loser.name].join(' ');
 }
 
 function Player(name) {
