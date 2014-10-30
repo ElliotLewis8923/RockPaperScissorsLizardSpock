@@ -7,6 +7,13 @@ body, header {
 
 }
 
+header {
+	border-bottom: 5px solid black;
+}
+
+body {
+	margin: 50px;
+}
 img {
 	position: relative;
 	display: inline;
@@ -33,6 +40,7 @@ img:hover {
 	padding: 50px;
 	opacity: 0;
 	flex: 1 100%;
+	visibility: hidden;
 
 }
 
@@ -95,6 +103,8 @@ ul li {
 }
 
 form {
+	position: relative;
+	top: 300px;
 	opacity: 1;
 }
 

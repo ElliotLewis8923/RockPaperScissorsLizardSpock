@@ -13,7 +13,8 @@ $(document).ready(function(){
 	 });
 
 	$('button').on('click', function() {
-		$('.choices').animate({
+		$
+		$('.choices').css('visibility', 'visible').animate({
 			opacity: 1
 			}, 1000);
 		$('form').animate({
