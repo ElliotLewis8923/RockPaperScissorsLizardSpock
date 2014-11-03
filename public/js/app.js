@@ -30,7 +30,7 @@ $(document).ready(function(){
 	$('<li>' + game.winningMessage() + '</li>').prependTo('#results').slideDown();
 
 
-		$('#results li:gt(3)').fadeOut(function(){
+		$('#results li:gt(2)').fadeOut(function(){
 		$(this).remove();
 	});
 	});

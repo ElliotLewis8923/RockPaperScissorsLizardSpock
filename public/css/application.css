@@ -34,7 +34,7 @@ img:hover {
 
 .choices {
 	display: absolute;
-	bottom: 40px;
+	bottom: 60px;
 	width: 90%;
 	margin: auto;
 	padding: 50px;
@@ -99,12 +99,25 @@ input, select, textarea{
 }
 
 ul li {
+	background-color: #bbb;
+	position: relative;
+	bottom: 100px;
 	list-style-type: none;
+	border: none;
+	border-radius: 4px;
+	margin: 13px auto;
+	display: block;
+	marker-offset: auto;
 }
 
 form {
 	position: relative;
 	top: 300px;
 	opacity: 1;
+}
+
+ul {
+	padding: 0px;
+	
 }
 
