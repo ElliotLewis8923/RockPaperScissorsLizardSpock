@@ -11,8 +11,8 @@ Game.prototype.PAIRS = Game.prototype.PAIRS = {
 	spock: {scissors: 'bends', rock: 'vapourises'}
 }
 
-var winner;
-var loser;
+winner = null;
+loser = null;
 
 Game.prototype.draw = function() {
 	return this.player1.pick === this.player2.pick;
