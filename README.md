@@ -24,11 +24,6 @@ Change into the directory:
 $ cd RockPaperScissorsLizardSpock
 ```
 
-Install dependencies:
-```shell
-$ npm install
-```
-
 Run all tests:
 ```shell
 $ open SpecRunner.html
