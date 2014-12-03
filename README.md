@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/ElliotLewis8923/RockPaperScissorsLizardSpock/badges/gpa.svg)](https://codeclimate.com/github/ElliotLewis8923/RockPaperScissorsLizardSpock)
+
 RockPaperScissorsLizardSpock
 =========
 A game of rock paper scissors, with the addition of a couple more weapons.<br>
@@ -12,7 +14,7 @@ Technologies used:
 - CSS3
 - HTML5
 
-How to run tests
+How to use
 ----------------
 Clone the repository:
 ```shell
@@ -27,4 +29,13 @@ $ cd RockPaperScissorsLizardSpock
 Run all tests:
 ```shell
 $ open SpecRunner.html
+```
+
+Start server:
+```shell
+$ npm install
+```
+
+```shell
+$ node server
 ```
